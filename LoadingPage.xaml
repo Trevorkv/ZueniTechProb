@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApplication1.LoadingPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="LoadingPage" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" WindowStyle="None" Loaded="InitState">
+    <Grid Background="LightBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="lblLoading" FontSize="100" VerticalAlignment="Center" HorizontalAlignment="Center">Welcome</Label>
+
+        <Canvas x:Name="cnvSpinner" Grid.Row="1" Width="210" Height="210" VerticalAlignment="Center" Background="LightBlue">
+            <Ellipse x:Name="circle0" Width="20" Height="20" Fill="Gray" Canvas.Left="95" Opacity="0.8" Canvas.Top="36"/>
+            <Ellipse x:Name="circle1" Width="20" Height="20" Fill="Gray" Canvas.Left="40" Opacity="0.6" Canvas.Top="70"/>
+            <Ellipse x:Name="circle2" Width="20" Height="20" Fill="Gray" Canvas.Right="40" Opacity="1" Canvas.Top="70"/>
+            <Ellipse x:Name="circle3" Width="20" Height="20" Fill="Gray" Canvas.Right="45" Opacity="0.1" Canvas.Top="130"/>
+            <Ellipse x:Name="circle4" Width="20" Height="20" Fill="Gray" Canvas.Left="95" Opacity="0.2" Canvas.Bottom="36"/>
+            <Ellipse x:Name="circle5" Width="20" Height="20" Fill="Gray" Canvas.Left="45" Opacity="0.4" Canvas.Top="130"/>
+            
+            <Canvas.LayoutTransform>
+                <RotateTransform x:Name="SpinnerTransform" Angle="0"></RotateTransform>
+            </Canvas.LayoutTransform>
+        </Canvas>
+    </Grid>
+</Window>
